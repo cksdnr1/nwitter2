@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import AppRouter from "components/Router";
-import { authService } from "myFB";
+import React, { useEffect, useState } from 'react';
+import AppRouter from 'components/Router';
+import { authService } from 'myFB';
 
 function App() {
 	const [init, setInit] = useState(false);
@@ -22,9 +22,8 @@ function App() {
 			{init ? (
 				<AppRouter isLoggedIn={isLoggedIn} userObj={userObj} />
 			) : (
-				"Initializing..."
+				'Initializing...'
 			)}
-			<footer>&copy; {new Date().getFullYear()} Nwitter</footer>
 		</>
 	);
 }
