@@ -52,13 +52,10 @@ export default ({ refreshUser, userObj }) => {
 						marginTop: 10,
 					}}
 				/>
-				<span
-					className="formBtn cancelBtn logOut"
-					onClick={onLogOutClick}
-				>
-					Log out
-				</span>
 			</form>
+			<span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
+				Log out
+			</span>
 		</div>
 	);
 };

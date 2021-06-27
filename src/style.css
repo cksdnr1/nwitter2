@@ -51,6 +51,7 @@ form {
 	text-align: center;
 	background-color: white;
 	color: black;
+	margin-bottom:10px;
 }
 
 .formBtn {
@@ -62,6 +63,7 @@ form {
 	border-radius: 20px;
 	background-color: #04aaff;
 	cursor: pointer;
+	margin-bottom: -10px;
 }
 
 .cancelBtn {
@@ -80,7 +82,7 @@ form {
 }
 
 .logOut {
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 /* Nwitter Factory */
@@ -164,7 +166,7 @@ form {
 
 .nweetEdit .formBtn {
 	cursor: pointer;
-	margin-top: 15px;
+	margin-top: 10px;
 	margin-bottom: 5px;
 }
 
