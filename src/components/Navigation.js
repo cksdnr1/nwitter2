@@ -5,50 +5,52 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = ({ userObj }) => (
-	<nav>
-		<ul
-			style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}
-		>
-			<li>
-				<Link to="/" style={{ marginRight: 10, display:"flex"
-					,
-						flexDirection: 'column',
-						alignItems: 'center',
-						fontSize: 12,}}>
+	<>
+		<nav className="navbar navbar-expand-lg navbar-dark bg-blue">
+			<div className="container-fluid">
+				<a className="navbar-brand" href="#">
 					<FontAwesomeIcon
 						icon={faTwitter}
 						color={'#04AAFF'}
-						size="2x"
+						size="1x"
 					/>
-					<span style ={{marginTop:10}}>Home</span>
-					
-				</Link>
-			</li>
-			<li>
-				<Link
-					to="/profile"
-					style={{
-						marginLeft: 10,
-						display: 'flex',
-						flexDirection: 'column',
-						alignItems: 'center',
-						fontSize: 12,
-					}}
+					Cwitter
+				</a>
+				<button
+					className="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
 				>
-					<FontAwesomeIcon
-						icon={faUser}
-						color={'#04AAFF'}
-						size="2x"
-					/>
-					<span style={{ marginTop: 10 }}>
-						{userObj.displayName
-							? `${userObj.displayName}의 Profile`
-							: 'Profile'}
-					</span>
-				</Link>
-			</li>
-		</ul>
-	</nav>
+					<span className="navbar-toggler-icon"></span>
+				</button>
+				<div className="collapse navbar-collapse" id="navbarNav">
+					<ul className="navbar-nav">
+						<li className="nav-item">
+							<Link
+								to="/"
+								className="nav-link active"
+								aria-current="page"
+								href="#"
+							>
+								Home
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link to="/profile" className="nav-link" href="#">
+								{userObj.displayName
+									? `${userObj.displayName}'s Profile`
+									: 'Profile'}
+							</Link>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</>
 );
 
 export default Navigation;
