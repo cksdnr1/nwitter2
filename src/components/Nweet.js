@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 
-const Nweet = ({ nweetObj, isOwner }) => {
+const Nweet = ({ nweetObj, isOwner, userObj}) => {
 	const [editing, setEditing] = useState(false);
 	const [newNweet, setNewNweet] = useState(nweetObj.text);
 	const onDeleteClick = async () => {
@@ -58,7 +58,7 @@ const Nweet = ({ nweetObj, isOwner }) => {
 				</>
 			) : (
 				<>
-					<h4> {nweetObj.text} </h4>
+					<h4> {nweetObj.text} {userObj.displayName} </h4>
 					{nweetObj.attachmentURL && (
 						<img src={nweetObj.attachmentURL} />
 					)}

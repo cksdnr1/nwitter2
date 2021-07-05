@@ -15,7 +15,6 @@ export default ({ refreshUser, userObj }) => {
 			.where('creatorId', '==', userObj.uid)
 			.orderBy('createdAt')
 			.get();
-		console.log(nweets.docs.map((doc) => doc.data()));
 	};
 	const onChange = (event) => {
 		const {

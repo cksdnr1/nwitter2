@@ -1,12 +1,15 @@
 import { authService } from 'myFB';
 import React, { useState } from 'react';
+import Modal from 'components/Modal';
+import { Button } from 'react-bootstrap';
 
 const AuthForm = () => {
-	const [newAccount, setNewAccount] = useState(true);
+	const [newAccount, setNewAccount] = useState(false);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [error, setError] = useState('');
-	const toggleAccount = () => setNewAccount((prev) => !prev);
+	const [joinModal, setJoinModal] = useState(0);
+	//const toggleAccount = () => setNewAccount((prev) => !prev);
 	const onChange = (event) => {
 		const {
 			target: { name, value },
@@ -36,6 +39,15 @@ const AuthForm = () => {
 			setError(error.message);
 		}
 	};
+	const onJoinModal = () => {
+		setJoinModal(1);
+		console.log(joinModal);
+	};
+	const IdPasswordModal = () => {
+		if (joinModal !== 0) {
+			return <Modal joinModal={joinModal} setJoinModal={setJoinModal} />;
+		}
+	};
 	return (
 		<>
 			<form onSubmit={onSubmit} className="container">
@@ -59,13 +71,21 @@ const AuthForm = () => {
 				<input
 					type="submit"
 					className="authInput authSubmit"
-					value={newAccount ? 'Create Account' : 'Log In'}
+					value={'Log In'}
 				/>
 				{error && <span className="authError">{error}</span>}
 			</form>
-			<span onClick={toggleAccount} className="authSwitch">
-				{newAccount ? 'Sign in' : 'Create Account'}
-			</span>
+			<Button
+				onClick={onJoinModal}
+				style={{
+					background: 'transparent',
+					color: 'black',
+					border: 'None',
+				}}
+			>
+				Join
+			</Button>
+			{IdPasswordModal()}
 		</>
 	);
 };

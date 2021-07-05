@@ -27,7 +27,7 @@ const Auth = () => {
 				icon={faTwitter}
 				color={'#04AAFF'}
 				size="3x"
-				style={{ marginBottom: 30 }}
+				style={{ marginBottom: 70 }}
 			/>
 			<AuthForm />
 			<div className="authBtns">
@@ -36,7 +36,7 @@ const Auth = () => {
 					name="google"
 					className="authBtn"
 				>
-					Continue with Google
+					Continue with Google 
 					<FontAwesomeIcon icon={faGoogle} />
 				</button>
 				<button

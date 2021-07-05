@@ -1,0 +1,85 @@
+.modalBackground {
+	width: 100vw;
+	height: 100vw;
+	background-color: transparent;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modalContainer {
+	width: 600px;
+	height: 300px;
+	border-radius: 12px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+}
+
+.modalContainer .title {
+	display: inline-block;
+	text-align: center;
+	margin-top: -15px;
+	color: black;
+	font-size: 35px;
+}
+
+.titleCloseBtn {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: -20px;
+}
+
+.titleCloseBtn Button {
+	background-color: transparent;
+	border: none;
+	font-size: 17px;
+	color: black;
+}
+
+.modalContainer .body {
+	flex: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.modalContainer .footer {
+	flex: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modalContainer .footer Button {
+	width: 100px;
+	height: 35px;
+	margin: 12px;
+	border: none;
+	background-color: #04aaff;
+	color: white;
+	border-radius: 8px;
+	font-size: 15px;
+}
+
+#cancelBtn {
+	background-color: crimson;
+}
+
+.modalContainer .pwdInput {
+	margin-bottom :10px;
+	border-radius:12px;
+
+}
+.modalContainer .PasswordGroup {
+	flex: 20%;
+	align-items: center;
+	font-size: 1.2rem;
+	text-align: center;
+	margin-top:20px;
+}
